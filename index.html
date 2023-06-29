@@ -1,13 +1,46 @@
-<a href="#" onclick="generateAnchorLink();">リンク</a>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Infinite Anchor Links</title>
+</head>
+<body>
+  <ul>
+    <li><a href="#link1">Link 1</a></li>
+    <li><a href="#link2">Link 2</a></li>
+    <li><a href="#link3">Link 3</a></li>
+    <!-- 繰り返し -->
+    <!-- 以下のコードを適切な箇所に挿入します -->
+    <!-- <li><a href="#link4">Link 4</a></li> -->
+    <!-- <li><a href="#link5">Link 5</a></li> -->
+    <!-- <li><a href="#link6">Link 6</a></li> -->
+    <!-- ... -->
+  </ul>
 
-<script>
-function generateAnchorLink() {
-  var randomString = generateRandomString(); // ランダムな文字列を生成する関数の呼び出し
-  var url = "https://scfcdv.github.io/r/#" + randomString;
-  window.location.href = url;
-}
+  <!-- 繰り返し -->
+  <!-- 以下のコードを適切な箇所に挿入します -->
+  <!-- <div id="link4">Link 4 Content</div> -->
+  <!-- <div id="link5">Link 5 Content</div> -->
+  <!-- <div id="link6">Link 6 Content</div> -->
+  <!-- ... -->
 
-function generateRandomString() {
-  // ランダムな文字列を生成する処理
-}
-</script>
+  <script>
+    // 以下のコードを適切なタイミングで実行します
+    // ページの読み込み完了後など
+
+    // 無限ループの例（Ctrl + Cなどで中断する必要があります）
+    while (true) {
+      // 繰り返しリンクの要素を生成し、適切な箇所に挿入します
+      const linkNumber = document.querySelectorAll('a').length + 1;
+      const newLink = document.createElement('li');
+      newLink.innerHTML = `<a href="#link${linkNumber}">Link ${linkNumber}</a>`;
+      document.querySelector('ul').appendChild(newLink);
+
+      // 繰り返しセクションの要素を生成し、適切な箇所に挿入します
+      const newSection = document.createElement('div');
+      newSection.id = `link${linkNumber}`;
+      newSection.textContent = `Link ${linkNumber} Content`;
+      document.body.appendChild(newSection);
+    }
+  </script>
+</body>
+</html>
