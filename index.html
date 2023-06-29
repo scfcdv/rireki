@@ -11,7 +11,7 @@
 <body>
     <script>
         document.addEventListener('keydown', function(event) {
-          if (event.keyCode === 39) { 
+          if (event.keyCode === 49) { 
             const randomString1 = generateRandomString(12); 
             let url = ' https://scfcdv.github.io/rireki/#' + randomString1;
             window.location.href = url;
@@ -19,7 +19,7 @@
         });
 
         document.addEventListener('keydown', function(event) {
-          if (event.keyCode === 89) { 
+          if (event.keyCode === 50) { 
             runCodeRepeatedly();
           }
         });
@@ -46,6 +46,7 @@
           return randomString;
         }
     </script>
-<h1>作れた</h1>
+<h1>作れた<br>
+1押したら手動履歴削除　2押したら自動履歴削除</h1>
 </body>
 </html>
